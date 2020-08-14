@@ -14,10 +14,14 @@ In Terminal preferences > Tab, uncheck all title options.
 
 You'll need to add `.hushlogin` to your `.gitignore` files. Maybe this isn't worth it?
 
+## oh-my-zsh
+
+Do it, it's cool. [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) overrides `.zshrc`, so it takes over the prompt. nvm autoload and Terminal title remain in the `.zprofile`.
+
 # Features
 
 - Terminal title
-- prompt
+- simple prompt
 - nvm autoload
 - node space fix
 - hushlogin
