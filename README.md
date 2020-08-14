@@ -4,7 +4,7 @@ Environment configuration
 
 # Usage
 
-Run the install script or copy/paste.
+Run the install script.
 
 ```zsh
 ./install.sh
@@ -14,17 +14,14 @@ In Terminal preferences > Tab, uncheck all title options.
 
 You'll need to add `.hushlogin` to your `.gitignore` files. Maybe this isn't worth it?
 
-## oh-my-zsh
-
-Do it, it's cool. [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) overrides `.zshrc`, so it takes over the prompt. nvm autoload and Terminal title remain in the `.zprofile`.
-
 # Features
 
 - Terminal title
-- simple prompt
 - nvm autoload
 - node space fix
 - hushlogin
+- oh-my-zsh
+- zsh-command-time
 
 ## Terminal title
 
@@ -35,3 +32,7 @@ stt_tab "${PWD##*/} · .zprofile"
 function precmd () { stt_tab "${PWD##*/}" }
 function preexec() { stt_tab "${PWD##*/} · $1" }
 ```
+
+## oh-my-zsh
+
+[default .zshrc](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template)

@@ -1,24 +1,3 @@
-#
-# pwfisher terminal titles
-#
-# https://superuser.com/a/344397/79598:
-setTerminalText () { local mode=$1 ; shift ; echo -ne "\033]$mode;$@\007" }
-stt_both  () { setTerminalText 0 $@; }
-stt_tab   () { setTerminalText 1 $@; }
-stt_title () { setTerminalText 2 $@; }
-# me:
-DISABLE_AUTO_TITLE="true"
-stt_tab "${PWD##*/} · .zprofile"
-function precmd () { stt_tab "${PWD##*/}" }
-function preexec() { stt_tab "${PWD##*/} · $1" }
-
-###
-
-export PATH="$HOME/bin:$PATH"
-export PATH="$PATH:/usr/local/opt/yarn/bin"
-
-###
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
@@ -45,18 +24,3 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
-###
-
-#
-# pwfisher edits below
-#
-alias ll='ls -alh'
-alias gti=git
-
-export NODE_OPTIONS=--max_old_space_size=8192
-
-touch .hushlogin # worth it?
-
-# Add a blank line after initial output.
-echo
