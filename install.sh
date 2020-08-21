@@ -20,7 +20,7 @@ if [[ $(grep -c command-time ~/.zshrc) = 0 ]]; then
 fi
 
 # Add zsh customizations
-for x (aliases hushlogin node nvm-autoload path terminal-titles yarn)
+for x (aliases node nvm-autoload path terminal-titles yarn)
   ln -sf "$PWD/pwfisher-$x.zsh" ~/.oh-my-zsh/custom/
 
 # Success

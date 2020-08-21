@@ -12,14 +12,11 @@ Run the install script.
 
 In Terminal preferences > Tab, uncheck all title options.
 
-You'll need to add `.hushlogin` to your `.gitignore` files. Maybe this isn't worth it?
-
 # Features
 
 - Terminal title
 - nvm autoload
 - node space fix
-- hushlogin
 - oh-my-zsh
 - zsh-command-time
 
