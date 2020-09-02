@@ -15,7 +15,7 @@ In Terminal preferences > Tab, uncheck all title options.
 # Features
 
 - Terminal title
-- nvm autoload
+- lazy nvm init and autoload
 - node space fix
 - oh-my-zsh
 - zsh-command-time
