@@ -1,0 +1,9 @@
+--ignore-dir=node_modules/
+--ignore-dir=build/
+--ignore-dir=dist/
+--ignore-dir=.next/
+--ignore-dir=__snapshots__/
+--ignore-dir=lcov-report/
+--ignore-dir=coverage/
+--ignore-dir=out/
+
