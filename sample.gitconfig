@@ -1,0 +1,8 @@
+[user]
+    name = John Doe
+    email = john.doe@example.com
+[core]
+    pager = cat
+    editor = nano
+[pull]
+    rebase = true

@@ -1,10 +1,18 @@
 #!/bin/zsh
 
+# Install colordiff (and homebrew)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew install colordiff
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
 # Install custom .zprofile
-if [[ -e ~/.zprofile && ! -e ~/.zprofile.pre-pwfisher-dotfiles ]]; then
-  mv ~/.zprofile ~/.zprofile.pre-pwfisher-dotfiles
-fi
-ln -sf "$PWD/.zprofile" ~/.zprofile
+#if [[ -e ~/.zprofile && ! -e ~/.zprofile.pre-pwfisher-dotfiles ]]; then
+#  mv ~/.zprofile ~/.zprofile.pre-pwfisher-dotfiles
+#fi
+#ln -sf "$PWD/.zprofile" ~/.zprofile
 
 # Install oh-my-zsh
 if [[ ! -e ~/.oh-my-zsh ]]; then
