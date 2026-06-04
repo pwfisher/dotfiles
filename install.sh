@@ -31,5 +31,9 @@ fi
 for x (aliases node nvm-autoload path terminal-titles yarn)
   ln -sf "$PWD/pwfisher-$x.zsh" ~/.oh-my-zsh/custom/
 
+# Install global Claude config
+mkdir -p ~/.claude
+ln -sf "$PWD/.claude/CLAUDE.md" ~/.claude/CLAUDE.md
+
 # Success
 echo "pwfisher dotfiles installed"
