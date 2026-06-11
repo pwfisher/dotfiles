@@ -27,8 +27,19 @@ if [[ $(grep -c command-time ~/.zshrc) = 0 ]]; then
   sed -Ei '.pre-pwfisher-dotfiles' 's/^plugins=\((.*)\)/plugins=\(\1 command-time\)/' ~/.zshrc
 fi
 
+# Install zsh-nvm (lazy nvm init + .nvmrc autoload)
+if [[ ! -e ~/.oh-my-zsh/custom/plugins/zsh-nvm ]]; then
+  git clone https://github.com/lukechilds/zsh-nvm.git ~/.oh-my-zsh/custom/plugins/zsh-nvm
+fi
+if [[ $(grep -c zsh-nvm ~/.zshrc) = 0 ]]; then
+  # Add the plugin and set NVM_LAZY_LOAD/NVM_AUTOLOAD before oh-my-zsh sources it.
+  sed -Ei '.pre-pwfisher-dotfiles' 's/^plugins=\((.*)\)/plugins=\(\1 zsh-nvm\)\
+export NVM_LAZY_LOAD=true\
+export NVM_AUTOLOAD=true/' ~/.zshrc
+fi
+
 # Add zsh customizations
-for x (aliases node nvm-autoload path terminal-titles yarn)
+for x (aliases node path terminal-titles yarn)
   ln -sf "$PWD/pwfisher-$x.zsh" ~/.oh-my-zsh/custom/
 
 # Install global Claude config
