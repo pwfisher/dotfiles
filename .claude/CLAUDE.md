@@ -57,3 +57,7 @@ For multi-step tasks, state a brief plan:
 ```
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+## 5. Memory
+
+Memory is global at `~/.claude/memory/`, not the project-scoped path described in the auto-memory section of your system prompt. Read its `MEMORY.md` index and treat its entries as cross-project memory. Save new memories there too, except when something is genuinely project-specific — in which case use the project-scoped path.
