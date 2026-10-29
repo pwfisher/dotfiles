@@ -1,6 +1,8 @@
 --ignore-dir=__nocks__/
 --ignore-dir=__snapshots__/
+--ignore-dir=.jest-cache/
 --ignore-dir=.next/
+--ignore-dir=.vite/
 --ignore-dir=build/
 --ignore-dir=coverage/
 --ignore-dir=dist/
